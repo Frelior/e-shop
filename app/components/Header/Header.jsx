@@ -2,11 +2,12 @@
 
 import Image from "next/image"
 
-import { StyledHeader } from "./StyledHeader.js"
+import "./header.scss"
+import { StyledHeader } from "./StyledHeader"
 
 export default function Header() {
   return (
-    <StyledHeader>
+    <div className="header">
       <div className="inner">
         <h1>Є-Shop</h1>
 
@@ -14,7 +15,7 @@ export default function Header() {
 
         <div className="nav-links">
           <a
-            href=""
+            href="/"
             className="nav-link"
           >
             <Image
@@ -51,6 +52,7 @@ export default function Header() {
           </a>
         </div>
       </div>
-    </StyledHeader>
+    </div>
+    
   )
 }
