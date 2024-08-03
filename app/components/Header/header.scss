@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #f1f1f1;
+  height: 9.5rem;
 
   .inner {
     padding: 1.7rem 0;
@@ -30,21 +31,26 @@
     .nav-links {
       display: flex;
       gap: 3.2rem;
+      height: 100%;
 
       .nav-link {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         gap: 0.8rem;
         width: 6rem;
 
         img {
-          flex: 1;
+          // flex: 1;
+          height: auto;
+          width: auto;
+          // display: none;
         }
 
         &:hover {
-          background-color: var(--color-blue-light);
+          // background-color: var(--color-blue-light);
+          text-decoration: underline;
         }
       }
     }

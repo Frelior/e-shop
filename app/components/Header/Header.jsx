@@ -1,10 +1,6 @@
-"use client"
-
 import Image from "next/image"
-
 import "./header.scss"
-import { StyledHeader } from "./StyledHeader"
-
+import Link from "next/link"
 export default function Header() {
   return (
     <div className="header">
@@ -14,8 +10,8 @@ export default function Header() {
         <input type="text" />
 
         <div className="nav-links">
-          <a
-            href="/"
+          <Link
+            href="/catalog"
             className="nav-link"
           >
             <Image
@@ -25,9 +21,9 @@ export default function Header() {
               height={26}
             />
             <p>Catalog</p>
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/basket"
             className="nav-link"
           >
             <Image
@@ -37,9 +33,9 @@ export default function Header() {
               height={26}
             />
             <p>Basket</p>
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/"
             className="nav-link"
           >
             <Image
@@ -49,10 +45,9 @@ export default function Header() {
               height={26}
             />
             <p>Profile</p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
-    
   )
 }
