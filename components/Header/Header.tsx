@@ -8,7 +8,7 @@ const Header = () => {
       <div className={`container ${styles.inner}`}>
         <Link
           href="/"
-          className={styles.logo}
+          className={`${styles.logo}`}
         >
           E-Shop
         </Link>
@@ -30,8 +30,8 @@ const Header = () => {
             imageSrc="/icons/icon_cart.svg"
           />
           <NavLink
-            href="/profie"
-            title="Profie"
+            href="/profile"
+            title="Profile"
             imageSrc="/icons/icon_profile.svg"
           />
         </nav>
