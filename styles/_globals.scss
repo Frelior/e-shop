@@ -19,3 +19,9 @@ body {
   padding: 0 2rem;
   width: 100%;
 }
+main.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem 0;
+}
