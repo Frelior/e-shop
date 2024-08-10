@@ -1,0 +1,75 @@
+.product-item {
+  height: 53.1rem;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+
+  .image-wrapper {
+    position: relative;
+    height: 21.6rem;
+  }
+
+  .product-info {
+    flex-grow: 1;
+    gap: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    .product-title {
+      font-size: 2rem;
+      line-height: 3.2rem;
+      height: 6.4rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .product-price {
+      display: flex;
+      flex-grow: 1;
+      align-items: flex-end;
+
+      flex-wrap: wrap;
+      .price-discount {
+        font-weight: bold;
+        font-size: 2rem;
+        display: inline;
+        margin-right: 0.8rem;
+      }
+      .price-original {
+        font-size: 1.4rem;
+        color: var(--color-gray);
+        text-decoration: line-through;
+      }
+    }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & p {
+        font-size: 1.4rem;
+      }
+      .In-Stock {
+        color: green;
+      }
+      .Out-of-Stock {
+        color: red;
+      }
+      .Low-Stock {
+        color: orange;
+      }
+
+      .favorite {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 5rem 0rem rgba(0, 0, 0, 0.2);
+        background-image: url("/icons/icon_heart.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

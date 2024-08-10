@@ -1,12 +1,39 @@
-'use client'
-import {useGetProductsQuery} from "../../store/products/products-api"
-export default function HorizontalScroller() {
+"use client"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Scrollbar } from "swiper/modules"
+import "swiper/css"
 
-    const {data, isLoading, error} = useGetProductsQuery(3)
-    console.log(data);
-    
+import "swiper/css/navigation"
+import "swiper/css/scrollbar"
+import "./HorizontalScroller.scss"
 
+export default function HorizontalScroller({
+  children,
+  isLoading,
+  title,
+  slidesPerView,
+  className,
+}: {
+  children: React.ReactNode
+  isLoading: boolean
+  title: string
+  slidesPerView: number
+  className?: string | undefined
+}) {
   return (
-    <div>HorizontalScroller</div>
+    <div>
+      <h3 className="pb-[2.8rem] text-[3.2rem]">{title}</h3>
+      {isLoading && <SwiperSlide>Loading...</SwiperSlide>}
+      <Swiper
+        modules={[Navigation, Scrollbar]}
+        navigation={true}
+        scrollbar={true}
+        className={`${className} categorySwiper`}
+        slidesPerView={slidesPerView}
+        spaceBetween={16}
+      >
+        {children}
+      </Swiper>
+    </div>
   )
 }

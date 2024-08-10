@@ -11,9 +11,7 @@ import { useGetBannerImagesQuery } from "@/store/banner/banner-api"
 import { IBannerItem } from "@/store/banner/banner.types"
 
 export default function Banner() {
-  const { data, isLoading, error } = useGetBannerImagesQuery(3)
-  console.log(data);
-  
+  const { data, isLoading } = useGetBannerImagesQuery(3)
 
   return (
     <div className={`banner h-[26rem]`}>
