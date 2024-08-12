@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function CategoryButton({ category }: { category: ICategory }) {
   return (
-    <Link href={``}>
+    <Link href={`catalog/${category.slug}`}>
       <div className="category-button">
         <Image
           src={category.logoUrl}
@@ -14,7 +14,6 @@ export default function CategoryButton({ category }: { category: ICategory }) {
           sizes="(100%, 100%)"
           className="object-cover"
         />
-        <p>{category.name}</p>
       </div>
     </Link>
   )
