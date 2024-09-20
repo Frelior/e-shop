@@ -28,15 +28,22 @@ export default function NewInput() {
 
     text = `Number of Employees: ${data.employees} with a total of ${
       data.engCount
-    } Software Engineers, and ${
-      data.engOffshores === "0" ||
-      data.engOffshores === "" ||
-      data.engOffshores === "N/A"
-        ? "none"
-        : `${data.engOffshoresPrecent}`
-    } of them are from outsourcing regions. ${
-      data.revenue === "N/A" ? "" : `Revenue: ${data.revenue}`
-    }`
+    } Software Engineers${
+      data.engCount === "N/A" || data.engCount === "0"
+        ? "."
+        : `, and ${
+            data.engOffshores === "0" ||
+            data.engOffshores === "" ||
+            data.engOffshores === "N/A"
+              ? "none"
+              : `${data.engOffshoresPrecent}`
+          } of them are from outsourcing regions.`
+    } ${data.revenue === "N/A" ? "" : `Revenue: ${data.revenue}`}
+     ${
+       data.funding && data.funding === "N/A"
+         ? ""
+         : `Total funding: ${data.funding}`
+     } `
   }
 
   return (
