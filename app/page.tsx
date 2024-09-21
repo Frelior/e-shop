@@ -7,8 +7,8 @@ import NewInput from "@/components/NewOne/NewOne"
 export default function HomePage() {
   return (
     <div className=" flex gap-4">
-      <OldInput />
-      <NewInput/>
+      {/* <OldInput /> */}
+      <NewInput />
     </div>
   )
 }
